@@ -4,6 +4,7 @@
 
 package vilgraph;
 
+import function.FunctionField;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
@@ -14,12 +15,12 @@ public class FunctionOptions extends JPanel{
     
     public FunctionOptions(){
         
-        JButton solveButton = new JButton("solve f(x) = 0");
+        JButton solveButton = new JButton("solve f(x) ≈ 0");
         solveButton.addActionListener((ActionEvent e) -> {
             String ans = active.solve();
             if(ans.equals("NaN"))
                 JOptionPane.showMessageDialog(null, "no answer found on screen");
-            JOptionPane.showMessageDialog(null, "x ≈ " + active.solve());
+            JOptionPane.showMessageDialog(null, active.solve());
         });
         add(solveButton);
         

@@ -4,6 +4,7 @@
 
 package vilgraph;
 
+import function.FunctionField;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
